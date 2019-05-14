@@ -15,7 +15,7 @@ dimData = np.prod(train_data.shape[1:])
 nClasses = 10
 batch_size = 32
 num_classes = 10
-epochs = 200
+epochs = 150
 
 save_dir = os.path.join(os.getcwd(), 'saved_models')
 model1_name = 'keras_cifar10_trained_model1.h5'
@@ -86,7 +86,7 @@ model2 = createModel()
 model2.compile(optimizer='rmsprop', loss='categorical_crossentropy', metrics=['accuracy'])
 
 batch_size = 256
-epochs = 100
+
 datagen = ImageDataGenerator(
         zoom_range=0.2, # randomly zoom into images
         rotation_range=10,  # randomly rotate images in the range (degrees, 0 to 180)
